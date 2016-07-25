@@ -2,7 +2,9 @@
 /* vim: set ts=2: */
 
 /* original data */
-var data = [
+var data 
+= [
+	["Title1","Title2","Title3","Title4"],
 	[1.12,2,3],
 	[true, false, null, "sheetjs"],
 	["foo","bar",new Date("2014-02-19T14:30Z"), "0.3"],
@@ -54,6 +56,7 @@ function sheet_from_array_of_arrays(data, opts) {
 			if(range.s.c > C) range.s.c = C;
 			if(range.e.r < R) range.e.r = R;
 			if(range.e.c < C) range.e.c = C;
+
 			var cell = {v: data[R][C] };
 			if(cell.v == null) continue;
 			var cell_ref = XLSX.utils.encode_cell({c:C,r:R});
@@ -66,6 +69,21 @@ function sheet_from_array_of_arrays(data, opts) {
 				cell.v = datenum(cell.v);
 			}
 			else cell.t = 's';
+
+			/* check if it is the first row*/
+			if(R === 0) cell.s = {
+							          "font": {
+							            "name": "Calibri",
+							            "bold": true,
+							            "sz": 14,
+							            "color": {
+							              "rgb": "FFFFFFFF"
+							            }
+						        	  },
+						        	  "fill":{"bgColor": "FF2222FF"},
+						        	  "alignment":{"vertical": "center", "horizontal": "center"}
+						          };
+
 			ws[cell_ref] = cell;
 		}
 	}
