@@ -77,7 +77,7 @@ function sheet_from_array_of_arrays(data, opts) {
 							            "bold": true,
 							            "sz": 14,
 							            "color": {
-							              "rgb": "00000000"
+							              "rgb": "FFFFFFFF"
 							            }
 						        	  },
 						        	  "fill":{"fgColor": {"rgb":"FF4F81BD"}},
