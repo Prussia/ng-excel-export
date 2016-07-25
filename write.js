@@ -77,11 +77,11 @@ function sheet_from_array_of_arrays(data, opts) {
 							            "bold": true,
 							            "sz": 14,
 							            "color": {
-							              "rgb": "FFFFFFFF"
+							              "rgb": "00000000"
 							            }
 						        	  },
-						        	  "fill":{"fgColor": {"rgb":"FFFFCC00"}},
-						        	  "alignment":{"vertical": "center", "horizontal": "center"}
+						        	  "fill":{"fgColor": {"rgb":"FF4F81BD"}},
+						        	  "alignment":{"horizontal": "center"}
 						          };
 
 			ws[cell_ref] = cell;
