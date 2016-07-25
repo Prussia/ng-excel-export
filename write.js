@@ -80,7 +80,7 @@ function sheet_from_array_of_arrays(data, opts) {
 							              "rgb": "FFFFFFFF"
 							            }
 						        	  },
-						        	  "fill":{"bgColor": "FF2222FF"},
+						        	  "fill":{"fgColor": {"rgb":"FFFFCC00"}},
 						        	  "alignment":{"vertical": "center", "horizontal": "center"}
 						          };
 
