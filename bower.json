@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "js-xlsx": "~0.8.0",
+    "js-xlsx-style": "~0.8.6",
     "angular-file-saver": "1.0.0"
   }
 }
